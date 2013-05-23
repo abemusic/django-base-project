@@ -60,6 +60,9 @@ on your next awesome app. Some things that might be of interest in this template
   postactivate script that's located in your virtualenv's bin directory. You can 
   quickly get to that locacation by typing `cdvirtualenv`. There's a template of
   a common script I use in `etc/postactivate`
+* Database configuration is using the dj-database-url utility to create the database
+  dictionary from a URI string that's pulled from the `DATABASE_URL` environment
+  variable.
 
 
 [virtualenvwrapper]: https://bitbucket.org/dhellmann/virtualenvwrapper
