@@ -59,7 +59,7 @@ MANAGERS = ADMINS
 ########## DATABASE CONFIGURATION
 # This pulls the database URL from the DATABASE_URL environment variable
 DATABASES = {
-    'default': dj_database_url()
+    'default': dj_database_url.config()
 }
 ########## END DATABASE CONFIGURATION
 
