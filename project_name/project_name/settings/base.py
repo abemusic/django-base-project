@@ -1,6 +1,7 @@
 """Common settings and globals."""
 
 import os
+import dj_database_url
 from os.path import abspath, basename, dirname, join, normpath
 from sys import path
 
@@ -56,16 +57,9 @@ MANAGERS = ADMINS
 
 
 ########## DATABASE CONFIGURATION
-# See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
+# This pulls the database URL from the DATABASE_URL environment variable
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
-    }
+    'default': dj_database_url()
 }
 ########## END DATABASE CONFIGURATION
 
