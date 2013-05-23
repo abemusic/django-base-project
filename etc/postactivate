@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+# Template for using as a virtualenvwrapper postactivate hook. This is 
+# a nice place to put project-specific configuration, environment variables,
+# etc. Things like your Django secret key, API keys, and passwords should
+# be defined here and pulled in to your project where needed instead of
+# committing them to your source control.
+#
+# Move (or copy in) this to your virtualenv's bin/postactivate. Make sure
+# to edit the variables below to match your environment.
+####
+
+export PROJECT_ROOT=/path/to/your/project_root/
+
+##
+# Django project environment variables
+##
+
+# The Django secret key, should be unique and stored out of the code. It's
+# also required for Django to start (as of 1.5)
+export DJANGO_SECRET_KEY='YOUR SECRET KEY GOES HERE'
+
+##
+# Switch to the root directory of the project on activation
+##
+cd $PROJECT_ROOT
