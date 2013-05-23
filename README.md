@@ -43,5 +43,23 @@ and django would render that as `foobar` in this case. For more information on
 starting a new project or app using templates, see the documentation at 
 https://docs.djangoproject.com/en/dev/ref/django-admin/#startproject-projectname-destination
 
+Now that you have a virtualenv and a `foobar` Django project, you can get started
+on your next awesome app. Some things that might be of interest in this template:
+
+* My requirements files to work with my common setup, so YMMV. It *should* even
+  work on heroku as well. To install packages from a requirements file in your 
+  virtualenv, use pip with the -r argument and point it to the file:
+
+    ```bash
+    # For development, use the local requirements file
+    pip install -r requirements/local.txt
+    ```
+* I've updated django settings to pull 'secret' stuff from environment variables,
+  so you'll need to include these in your environment. I suggest not adding them
+  to your .bash_profile or .bashrc, but instead take advantage of virtualenv-wrappers
+  postactivate script that's located in your virtualenv's bin directory. You can 
+  quickly get to that locacation by typing `cdvirtualenv`. There's a template of
+  a common script I use in `etc/postactivate`
+
 
 [virtualenvwrapper]: https://bitbucket.org/dhellmann/virtualenvwrapper
